@@ -9,8 +9,4 @@ document.getElementById("berekenen").innerText =berekenen;
 console.log(berekenen)
 window.alert(berekenen)
 document.write(berekenen)
-
-// let antwoord = "Ik heb nog geen idee hoeveel verdiepingen er moeten komen :-( ";
-// document.getElementById("antwoord").innerText = antwoord;
-
 console.log("Om het gewenste aantal autos kwijt te kunnen heb ik x verdiepingen nodig.")

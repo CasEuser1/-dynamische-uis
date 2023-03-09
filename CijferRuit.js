@@ -1,26 +1,22 @@
-let Nummer = Number(prompt('Hoeveel nummeres wil je in de ruit?')) + 2;
-let output = "";
-for (let x = 0; x < Nummer; x++){
-    let list = []
-    for(let i = 1; i < x; i++ ){
-        list.push(i)
-        console.log(list)
-    } 
-    let rij =  list.join("-");
-    document.write(rij + "<br>")
+let aantal = Number(prompt('Hoeveel getallen wil je in de output?')) + 2;
+let output = '';
+
+for (let i = 0; i < aantal; i++) {
+  let getallen = [];
+  for (let j = 1; j < i; j++) {
+    getallen.push(j);
+  }
+  if (getallen.length > 0) {
+    output += getallen.join('-') + '\n';
+  }
 }
 
-for (let x = 0; x < Nummer; x++){
-    let list = []
-    for(let i = 1; i < x; i++ ){
-        list.push(i)
-    } 
-    const parameter = document.createElement("pre")
-    parameter.innerText = list.join("-");
-    output += parameter.innerText + "\n";
-}
+let Reversed = output.split('\n');
+Reversed.pop(0)
+Reversed.pop(0)
+let x = Reversed.reverse().join('\n');
+output += x;
 
-const reversedOutput = output.split('\n').reverse().join('\n');
-const reversedParameter = document.createElement("pre")
-reversedParameter.innerText = reversedOutput;
-document.body.appendChild(reversedParameter);
+const Tekst = document.createElement('p');
+Tekst.innerText = output;
+document.body.appendChild(Tekst);

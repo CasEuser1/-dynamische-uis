@@ -1,11 +1,15 @@
+const fris = 2.00;
+const bier = 2.50;
+const wijn = 3.00;
 var bonnetje = [];
+
 while (true) {
     let product = prompt("Welk product wil je toevoegen? (of typ 'stop' om te stoppen)");
     if (product == "stop") {
         break;
     } else {
         if (product !== "fris" && product !== "bier" && product !== "wijn") {
-            WindowAlert("Dit ken ik niet.");
+            alert("Dit ken ik niet.");
         } else {
             let aantal = prompt("Hoeveel " + product + " wil je hebben?");
             let gevonden = false;
@@ -24,13 +28,25 @@ while (true) {
     }
 }
 if (bonnetje.length > 0) {
-    var bonnetjeOutput = "Bonnetje:";
+    var bonnetjeOutput = "Bonnetje:<br>";
     var totaalprijs = 0;
     for (var i = 0; i < bonnetje.length; i++) {
         var product = bonnetje[i].product;
         var aantal = bonnetje[i].aantal;
-        bonnetjeOutput += aantal + " " + product;
+        var prijs = 0;
+        if (product === "fris") {
+            prijs = fris;
+        }
+        else if (product === "bier") {
+            prijs = bier;
+        } 
+        else if (product === "wijn") {
+            prijs = wijn;
+        }
+        var productTotaal = prijs * aantal;
+        bonnetjeOutput += aantal + " " + product + " " + prijs.toFixed(2)  + " " + productTotaal.toFixed(2) + " ";
         totaalprijs += productTotaal;
     }
-    alert(bonnetjeOutput)
+    bonnetjeOutput += "Totaal: " + " " + totaalprijs.toFixed(2) + " " + " euro";
+    document.getElementById("output").innerHTML = bonnetjeOutput;
 }

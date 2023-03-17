@@ -1,22 +1,21 @@
-let aantal = Number(prompt('Hoeveel getallen wil je in de output?')) + 2;
-let output = '';
+let aantal = Number(prompt('Hoeveel getallen wil je in de cijferruit?')) + 2;
+let cijferruit = '';
 
 for (let i = 0; i < aantal; i++) {
-  let getallen = [];
+  let list = [];
   for (let j = 1; j < i; j++) {
-    getallen.push(j);
+    list.push(j);
   }
   if (getallen.length > 0) {
-    output += getallen.join('-') + '\n';
+    cijferruit += getallen.join('-') + '\n';
   }
 }
-
-let Reversed = output.split('\n');
+let Reversed = cijferruit.split('\n');
 Reversed.pop(0)
 Reversed.pop(0)
 let x = Reversed.reverse().join('\n');
-output += x;
+cijferruit += x;
 
 const Tekst = document.createElement('p');
-Tekst.innerText = output;
+Tekst.innerText = cijferruit;
 document.body.appendChild(Tekst);

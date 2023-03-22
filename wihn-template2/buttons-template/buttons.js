@@ -12,14 +12,34 @@ function changeImage(doosje){
     if (String(doosje) === "1"){
         button1 += 1
         document.getElementById('1').innerHTML = button1
+        document.getElementById('1').style.backgroundColor = "red";
+        document.getElementById('2').style.backgroundColor = "green";
+        document.getElementById('3').style.backgroundColor = "green";
+        document.getElementById('1').disabled = true;
+        document.getElementById('2').disabled = false;
+        document.getElementById('3').disabled = false;
     }
 
     else if (String(doosje) === "2"){
         button2 += 1
         document.getElementById('2').innerHTML = button2
+        document.getElementById('1').innerHTML = button1
+        document.getElementById('2').style.backgroundColor = "red";
+        document.getElementById('1').style.backgroundColor = "green";
+        document.getElementById('3').style.backgroundColor = "green";
+        document.getElementById('1').disabled = false;
+        document.getElementById('2').disabled = true;
+        document.getElementById('3').disabled = false;
     }
     else if (String(doosje) === "3"){
         button3 += 1
         document.getElementById('3').innerHTML = button3
+        document.getElementById('1').innerHTML = button1
+        document.getElementById('3').style.backgroundColor = "red";
+        document.getElementById('2').style.backgroundColor = "green";
+        document.getElementById('1').style.backgroundColor = "green";
+        document.getElementById('3').disabled = true;
+        document.getElementById('2').disabled = false;
+        document.getElementById('1').disabled = false;
     }
 }

@@ -1,0 +1,15 @@
+var button = document.createElement('button');
+var aantalclicks = 0
+button.innerHTML = 'klik hier'
+button.addEventListener("click", myFunction);
+document.body.appendChild(button);
+
+function myFunction() {
+    document.getElementById("x").innerHTML = "Welkom Cas Euser";
+    aantalclicks += 1
+    console.log(aantalclicks)
+    if (aantalclicks == 2) {
+        button.remove()
+    }
+}
+

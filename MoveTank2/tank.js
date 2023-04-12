@@ -3,10 +3,9 @@ var image = document.getElementById("image");
 document.onkeydown = checkKey;
 image.style.transform = "rotate(90deg)"
 
-let Rijden = 0
-let LinksEnRechts = 0
-let BovenEnOnder = 0
- 
+var linksrechts = 0
+var draaien = 0
+
 function checkKey(e) {
 	console.log("key nr = " + e.keyCode);
     e = e || window.event;
@@ -17,10 +16,14 @@ function checkKey(e) {
     } else if (e.keyCode == '40') { // down arrow
         console.log("down arrow");
     } else if (e.keyCode == '37') { // left arrow
+        image.style.marginLeft =  `${linksrechts = linksrechts - 10}px`;
+        image.style.backgroundPosition = `${draaien = draaien - 84}px 0px`
+        image.style.transform = "rotate(270deg)"
     	console.log("left arrow");
     } else if (e.keyCode == '39') {   // right arrow
     	console.log("right arrow");
-    image.style.backgroundPosition = `164px 0px`; // check goed de rupsband
-         
+        image.style.marginLeft =  `${linksrechts = linksrechts + 10}px`;
+        image.style.backgroundPosition = `${draaien = draaien + 84}px 0px`; // check goed de rupsband
+        image.style.transform = "rotate(90deg)"
     }
 }

@@ -1,4 +1,4 @@
-let imagelist = ['images/kirito.jpg','images/asuna.jpg','images/yuuki.jpg','images/suguha.jpg','images/alice.jpg','images/sinon.jpg','images/bercouli.jpg','images/eiji.jpg','images/yuna.jpg','images/yui.jpg']
+let imagelist = ['images/kirito.jpg','images/asuna.jpg','images/konno.jpg','images/suguha.jpg','images/alice.jpg','images/sinon.jpg','images/bercouli.jpg','images/eiji.jpg','images/yuna.jpg','images/yui.jpg']
 imagelist = shuffle(imagelist)
 
 function shuffle(array) {
@@ -12,15 +12,29 @@ function shuffle(array) {
     }
     return array;
 }
+
 for (let x = 0; x < imagelist.length; x++){
     let img = document.createElement("img");
-    img.src = imagelist[x];
-    let src = document.getElementById("images");
-    src.appendChild(img);
+    img.src ="images/background.jpg" ;
+    img.setAttribute("onclick","hello()")
+    img.setAttribute("id", String(x))
+    let source = document.getElementById("images");
+    source.appendChild(img);
+    if (imagelist.length = 10) {
+        imagelist.reverse()
+        let img = document.createElement("img");
+        img.src = "images/background.jpg";
+        img.setAttribute("onclick","hello()")
+        let source = document.getElementById("images");
+        source.appendChild(img);
+
+    }
 }
-for (var x = 1; x < 10 + 1; x++){
-    var knop = document.createElement("button")
-    imagelist.innerHTML = x
-    imagelist.setAttribute('id',imagelist)
-    imagelist.appendChild(imagelist)
+
+function hello() {
+    document.getElementById(1).src = imagelist
+    container = document.getElementById('images');
+    imagelist.style.backgroundImage = "images/background.jpg"
+    plaatje = document.getElementById('images')
+    plaatje.src = imagelist
 }

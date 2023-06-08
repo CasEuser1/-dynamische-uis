@@ -2,10 +2,3 @@ img{
     width: 100px;
     margin-right: 20px;
 }
-#images {
-    background-image: url('images/background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: absolute;
-  }

@@ -12,18 +12,16 @@ function shuffle(array) {
     }
     return array;
 }
-
 for (let x = 0; x < imagelist.length; x++){
     let img = document.createElement("img");
-    img.src ="images/background.jpg" ;
+    img.src = 'images/background.jpg';
     img.setAttribute("onclick","hello()")
-    img.setAttribute("id", String(x))
     let source = document.getElementById("images");
     source.appendChild(img);
     if (imagelist.length = 10) {
         imagelist.reverse()
         let img = document.createElement("img");
-        img.src = "images/background.jpg";
+        img.src = 'images/background.jpg';
         img.setAttribute("onclick","hello()")
         let source = document.getElementById("images");
         source.appendChild(img);
@@ -32,9 +30,12 @@ for (let x = 0; x < imagelist.length; x++){
 }
 
 function hello() {
-    document.getElementById(1).src = imagelist
+    alert("hoi")
+}
+
+function changeImage(){
     container = document.getElementById('images');
-    imagelist.style.backgroundImage = "images/background.jpg"
+    imagelist.style.backgroundImage = "url(images/background.jpg)"
     plaatje = document.getElementById('images')
-    plaatje.src = imagelist
+    plaatje.src = "images/background.jpg"
 }

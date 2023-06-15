@@ -1,0 +1,13 @@
+.gallery {
+    text-align: center;
+  }
+  
+.buttons {
+    margin-top: 10px;
+  }
+  
+button {
+    padding: 5px 10px;
+    height: 150px;
+    width: 150px;
+  }

@@ -16,6 +16,7 @@ function shuffle(array) {
 }
 for (let x = 0; x < imagelist.length; x++){
     let img = document.createElement("img");
+    
     img.src = 'images/'+Background+'.jpg';
     img.setAttribute("onclick","hello()")
     let source = document.getElementById("images");

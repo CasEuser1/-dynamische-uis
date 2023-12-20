@@ -9,7 +9,7 @@ var draaien = 0
 function checkKey(e) {
 	console.log("key nr = " + e.keyCode);
     e = e || window.event;
-    if(e.keyCode == 32){
+    if (e.keyCode == 32){
     	console.log("spacebar");
     } else if (e.keyCode == '38') {  // up arrow
         console.log("Up arrow");

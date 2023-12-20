@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rekenmachine</title>
+</head>
+<body>
+
+  <input type="text" id="display" readonly>
+  <br><br>
+
+
+
+  <button onclick="plus()">+</button>
+
+  <button onclick="uitrekenen()">=</button>
+
+  <script>
+
+for (let x = 0; x < 10; x++){
+    const button = document.createElement('button')
+    button.innerText = x
+    button.setAttribute('id',x)
+    button.setAttribute('onclick','klik(this)')
+    document.body.appendChild(button)
+}
+
+    let CurrentNummer = '';
+    let total = 0;
+
+    function klik(nummer) {
+      alert('Je hebt het nummer ' + Number(nummer.id) + ' ingedrukt');
+      CurrentNummer += Number(nummer.id);
+      document.getElementById('display').value = CurrentNummer;
+    }
+
+    function plus() {
+      total += parseInt(CurrentNummer);
+      CurrentNummer = '';
+    }
+
+    function uitrekenen() {
+      plus();
+      document.getElementById('display').value = total;
+    }
+  </script>
+</body>
+</html>
